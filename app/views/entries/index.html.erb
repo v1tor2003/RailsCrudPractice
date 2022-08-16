@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="entries">
+  <% @entries.each do |entry| %>
+    <%= render entry %>
+    <p>
+      <%= link_to "Show", entry %>
+    </p>
+  <% end %>
+</div>
+
+
+<!--<%= link_to "New car", new_entry_path %>-->

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GarageApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/app/assets/stylesheets/application.scss">
+      
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body class="body">
+    <div class="header">
+      <%= render "shared/header" %>
+    <div>
+    
+    <% if alert.present? %>
+      <div class="notification is-danger is-light"><%= alert %></div>
+    <% end %>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <footer class="footer">
+      <%= render 'shared/footer'%>
+    </footer>
+  </body>
+  
+</html>
