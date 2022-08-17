@@ -1,13 +1,13 @@
 <p style="color: green"><%= notice %></p>
-
-<div id="entries">
+<h1>Cars</h1>
+<table class="table table-striped table-bordered table-hover">
   <% @entries.each do |entry| %>
-    <%= render entry %>
-    <p>
-      <%= link_to "Show", entry %>
-    </p>
-  <% end %>
-</div>
+    <thead class="thead-dark">
+      <tr>    
+        <th><%= render entry %></th>
+        <th><%= link_to "Show", entry, class: "btn btn-secondary"%></th>    
+      </tr>
+  <% end %>   
+  </thead>
 
 
-<!--<%= link_to "New car", new_entry_path %>-->
